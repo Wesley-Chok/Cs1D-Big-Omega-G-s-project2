@@ -45,9 +45,9 @@ QVector<QString> graph::primMst()
     distance = 0;
     QVector<QString> mst;
 
-    int parent[29];
-    int key[29];
-    bool mstSet[29];
+    int parent[30];
+    int key[30];
+    bool mstSet[30];
 
     for(int i = 0; i < vNum; i++)
     {
