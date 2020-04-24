@@ -29,5 +29,13 @@ int main(int argc, char *argv[])
     }
     qDebug() << g.getDistance();
 
+    //DFS TEST
+    qDebug() << "\n-------------DFS----------------";
+    QVector<QString> dfs = g.DFS(ATTPark);
+    for(QString item:dfs)
+    {
+        qDebug() << item << endl;
+    }
+    qDebug() << g.getDistance();
     return a.exec();
 }

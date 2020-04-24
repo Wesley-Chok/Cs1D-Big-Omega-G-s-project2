@@ -18,6 +18,9 @@ public:
     //BFS
     QVector<QString> bfsTraversal(stadiums start);
 
+    //DFS
+    QVector<QString> DFS(stadiums start);
+
 signals:
 private:
     int distance;
@@ -31,6 +34,9 @@ private:
 
     //BFS
     QVector<int> sortStadium(stadiums v);
+
+    //DFS
+    void DFSUtil(stadiums start, bool visited[], QVector<QString> &dfsPath);
 };
 
 #endif // GRAPH_H

@@ -173,3 +173,49 @@ QVector<int> graph::sortStadium(stadiums v)
     }
     return vec;
 }
+
+//-----------------------DFS-----------------------//
+// Calls on DFSUtil, returns vector which has the path
+QVector<QString> graph::DFS(stadiums start)
+{
+    distance = 0;
+    QVector<QString> dfsPath;
+
+    bool *visited = new bool[vNum];
+    for(int i = 0; i < vNum; i++) {
+        visited[i] = false;
+    }
+
+    // Call the recursive helper function
+    // to print DFS traversal
+    DFSUtil(start, visited, dfsPath);
+    return dfsPath;
+}
+
+    // A recursive function used by DFS
+void graph::DFSUtil(stadiums start, bool visited[], QVector<QString> &dfsPath)
+{
+    // Mark the current node as visited and
+    // add to vector
+    visited[start] = true;
+    dfsPath.push_back(getStadiumName(start));
+
+    // Returns a vector of all the adjacent stadiums from start, sorted.
+    QVector<int> vec = sortStadium(static_cast<stadiums>(start));
+    QVector<int>::iterator it;
+
+    // Start the search for all adjacent stadiums from start stadium
+    for(it = vec.begin(); it != vec.end(); ++it)
+    {
+        // If the matrix's value is > 0 and current stadium hasn't been visited
+        if(matrix[start][*it] > 0 && !visited[*it])
+        {
+            // Update distance, call on function again, with the next shortest stadium
+            distance += matrix[start][*it];
+            DFSUtil(static_cast<stadiums>(*it), visited, dfsPath);
+        }
+    }
+
+
+}
+
