@@ -807,7 +807,7 @@ public:
         Backtoadmin_2->setText(QCoreApplication::translate("MainWindow", "Back", nullptr));
         prevstadiumlbl->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
         add_button->setText(QCoreApplication::translate("MainWindow", "Add", nullptr));
-        select_done->setText(QCoreApplication::translate("MainWindow", "Done", nullptr));
+        select_done->setText(QCoreApplication::translate("MainWindow", "Souvenir Shop", nullptr));
         add_label->setText(QCoreApplication::translate("MainWindow", "Avaliable Stadiums", nullptr));
         selected_label->setText(QCoreApplication::translate("MainWindow", "Selected Stadium", nullptr));
         sorted_label->setText(QCoreApplication::translate("MainWindow", "Sorted Stadium Trip", nullptr));

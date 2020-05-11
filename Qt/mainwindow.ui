@@ -868,7 +868,7 @@
          </rect>
         </property>
         <property name="text">
-         <string>Done</string>
+         <string>Souvenir Shop</string>
         </property>
        </widget>
        <widget class="QLabel" name="add_label">

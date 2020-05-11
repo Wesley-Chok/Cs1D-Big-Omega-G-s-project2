@@ -161,7 +161,9 @@ bool Controller::readSouvenirFile()
 
     QFile file(file_name);
     if (!file.open(QIODevice::ReadOnly | QIODevice::Text))
+    {
         return false;
+    }
     QTextStream in(&file);
     while (!in.atEnd())
     {
@@ -728,7 +730,6 @@ void Controller::updateMlb(QString team, QString stadium, QString capacity,QStri
 
         if(!qry.exec())
         {
-            //qDebug() <<"error updating values to db" << endl;
             qDebug() << qry.lastError().text() << endl;
         }
         qry.clear();
@@ -783,8 +784,6 @@ bool Controller::CheckEdge(QString start, QString end)
     }
     return present;
 }
-
-//NEW DANIEL STUFF START
 
 QSqlQueryModel* Controller::loadStadiumNames()
 {
@@ -1028,4 +1027,3 @@ stadiums Controller::getEnum(QString stadium)
 
     return sta;
 }
-//Daniel's Additions End

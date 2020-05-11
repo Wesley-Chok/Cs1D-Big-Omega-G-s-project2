@@ -23,7 +23,7 @@ public:
     void insertItem(QString user,int x);
 
     // hash function to map values to key
-    /** \fn hashFunction()
+    /** \fn insertItem()
      * This function will construct and map the values to the keys.
      * @param int x
      * @return nothing returned
@@ -32,7 +32,7 @@ public:
         return (x % BUCKET);
     }
 
-    /** \fn foundpass()
+    /** \fn insertItem()
      * This function will find the pass for the hashtable and will return boolean false value at the end
      * of the function
      * @param QString user
@@ -40,7 +40,7 @@ public:
      */
     bool foundpass(QString user);
 
-    /** \fn findkey()
+    /** \fn insertItem()
      * This function will find the key for the hastable and will return -1 at the end of the function.
      * @param QString user
      * @return -1

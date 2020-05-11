@@ -173,7 +173,15 @@ void MainWindow::on_loadTeamInfo_clicked()
 {
     QString teamname;
     QString stadium;
-    m_controller->readTeamFile();
+    bool success = m_controller->readTeamFile();
+    if(success)
+    {
+        QMessageBox::information(this, "Loading...", "MLB Info File Has Been Read In"  , QMessageBox::Ok, QMessageBox::NoButton);
+    }
+    else
+    {
+        QMessageBox::information(this, "Loading...", "MLB Info File Has Not Been Read In"  , QMessageBox::Ok, QMessageBox::NoButton);
+    }
     ui->teamcombobox->clear();
     ui->TeamCombosouv->clear();
     ui->tripBox->clear();
@@ -190,7 +198,15 @@ void MainWindow::on_loadTeamInfo_clicked()
 
 void MainWindow::on_loadSouvenirInfo_clicked()
 {
-    m_controller->readSouvenirFile();
+    bool success = m_controller->readSouvenirFile();
+    if(success)
+    {
+        QMessageBox::information(this, "Loading...", "Souvenir Info File Has Been Read In"  , QMessageBox::Ok, QMessageBox::NoButton);
+    }
+    else
+    {
+        QMessageBox::information(this, "Loading...", "Souvenir Info File Has Not Been Read In"  , QMessageBox::Ok, QMessageBox::NoButton);
+    }
 }
 
 void MainWindow::on_Backtoadmin_clicked()
@@ -205,7 +221,15 @@ void MainWindow::on_loadDatabtn_clicked()
 
 void MainWindow::on_loadstadiumsbtn_clicked()
 {
-    m_controller->readStadiumsFile();
+    bool success = m_controller->readStadiumsFile();
+    if(success)
+    {
+        QMessageBox::information(this, "Loading...", "Stadium Distances File Has Been Read In"  , QMessageBox::Ok, QMessageBox::NoButton);
+    }
+    else
+    {
+        QMessageBox::information(this, "Loading...", "Stadium Distances File Has Not Been Read In"  , QMessageBox::Ok, QMessageBox::NoButton);
+    }
 }
 
 void MainWindow::on_backtopass_clicked()
@@ -557,6 +581,7 @@ void MainWindow::on_backtologin_clicked()
 
 void MainWindow::on_dodgers_button_clicked()
 {
+    QMessageBox::information(this, "Trip Selected", "Dodgers Trip Has Been Selected..."  , QMessageBox::Ok, QMessageBox::NoButton);
     trip = Dodgers;
     selectedStadiums.push_back(m_controller->getStadiumName(LosAngelesDodgers));
 
@@ -567,6 +592,7 @@ void MainWindow::on_dodgers_button_clicked()
 
 void MainWindow::on_startStadium_button_clicked()
 {
+    QMessageBox::information(this, "Trip Selected", "Start + All Other Trip Has Been Selected..."  , QMessageBox::Ok, QMessageBox::NoButton);
     trip = Start;
 
     refreshWidgets();
@@ -576,6 +602,7 @@ void MainWindow::on_startStadium_button_clicked()
 
 void MainWindow::on_marlins_button_clicked()
 {
+    QMessageBox::information(this, "Trip Selected", "Marlins Trip Has Been Selected..."  , QMessageBox::Ok, QMessageBox::NoButton);
     trip = Marlins;
 
     selectedStadiums.push_back(m_controller->getStadiumName(MiamiMarlins));
@@ -595,6 +622,7 @@ void MainWindow::on_marlins_button_clicked()
 
 void MainWindow::on_custom_button_clicked()
 {
+    QMessageBox::information(this, "Trip Selected", "Custom Trip Has Been Selected..."  , QMessageBox::Ok, QMessageBox::NoButton);
     trip = Custom;
 
     refreshWidgets();
@@ -604,6 +632,7 @@ void MainWindow::on_custom_button_clicked()
 
 void MainWindow::on_traversals_button_clicked()
 {
+    QMessageBox::information(this, "Traversals Selected", "Traversal Display Has Been Selected..."  , QMessageBox::Ok, QMessageBox::NoButton);
     ui->stackedWidget->setCurrentWidget(ui->Planning);
 }
 
@@ -612,11 +641,11 @@ void MainWindow::on_add_button_clicked()
     QString stadium = ui->add_combo->currentText();
     if(stadium == "")
     {
-        QMessageBox::warning(this, "ERROR", "NO AVAILABLE STADIUMS! CLICK DONE!", QMessageBox::Ok, QMessageBox::NoButton);
+        QMessageBox::warning(this, "ERROR", "NO AVAILABLE STADIUMS! CLICK SOUVENIR SHOP!", QMessageBox::Ok, QMessageBox::NoButton);
     }
     else if(selectedStadiums.size() == 2 && trip == Dodgers)
     {
-        QMessageBox::warning(this, "ERROR", "THE TWO STADIUMS TO VISIT FOR THE DODGERS TOUR HAVE BEEN SELECTED! CLICK DONE!", QMessageBox::Ok, QMessageBox::NoButton);
+        QMessageBox::warning(this, "ERROR", "THE TWO STADIUMS TO VISIT FOR THE DODGERS TOUR HAVE BEEN SELECTED! CLICK SOUVENIR SHOP!", QMessageBox::Ok, QMessageBox::NoButton);
     }
     else if(trip == Start)
     {
@@ -662,7 +691,7 @@ void MainWindow::on_delete_button_clicked()
     {
         if(stadium != selectedStadiums[0])
         {
-        QMessageBox::warning(this, "ERROR", "START+ALL OTHER TRIP! CLICK BACK TO RESET STARTING LOCATION CAN BE RESET!", QMessageBox::Ok, QMessageBox::NoButton);
+        QMessageBox::warning(this, "ERROR", "START+ALL OTHER TRIP! DELETE STARTING STADIUM TO RESET!", QMessageBox::Ok, QMessageBox::NoButton);
         }
         else
         {
@@ -704,7 +733,6 @@ void MainWindow::resetDataMembers()
     trip = None;
 }
 
-//NEW DANIEL STUFF END
 void MainWindow::refreshWidgets()
 {
     if(selectedStadiums.empty())
@@ -743,9 +771,7 @@ void MainWindow::sortStadiums()
     {
         QVector<QString> selected = selectedStadiums;
         QString start = *selected.begin();
-        qDebug() << "start";
         recursiveStadiumSort(start, selected);
-        qDebug() << "end";
 
         ui->sorted_listView->setModel(new QStringListModel(QList<QString>::fromVector(sortedStadiums)));
     }
@@ -791,7 +817,6 @@ int MainWindow::nextStadium(QVector<int> dist, QVector<QString> &selected)
     }
 
     totalDistance += min;
-    qDebug() << min;
     return minIndex;
 }
 
@@ -801,7 +826,7 @@ void MainWindow::on_calculatesouvbtn_clicked()
     {
         int val = static_cast<QSpinBox*>(ui->souvenirtable->cellWidget(i,3))->value();
         QTableWidgetItem *price = ui->souvenirtable->item(i,2);
-        totalSouvenirprice = totalSouvenirprice + (price->text().toFloat()*val);
+        totalSouvenirprice = totalSouvenirprice + (price->text().toDouble()*val);
     }
     ui->grandtotal->setNum(totalSouvenirprice);
     totalSouvenirprice = 0;
@@ -819,13 +844,26 @@ void MainWindow::on_clearsouvbtn_clicked()
 
 void MainWindow::on_backtotrip_clicked()
 {
-    ui->stackedWidget->setCurrentWidget(ui->TripSelect);
+    for(int i = 0; i< souvenirs.count(); i++)
+    {
+        int val = static_cast<QSpinBox*>(ui->souvenirtable->cellWidget(i,3))->value();
+        QTableWidgetItem *price = ui->souvenirtable->item(i,2);
+        totalSouvenirprice = totalSouvenirprice + (price->text().toDouble()*val);
+    }
+    ui->grandtotal->setNum(totalSouvenirprice);
+    totalSouvenirprice = 0;
+
+    QMessageBox::information(this, "Receipt", "You Spent $" + ui->grandtotal->text() + ". Returning to Fan Trip Options..."  , QMessageBox::Ok, QMessageBox::NoButton);
+    ui->stackedWidget->setCurrentWidget(ui->FanOptions);
+    resetDataMembers();
     teams.clear();
     souvenirs.clear();
+    ui->grandtotal->clear();
 }
 
 void MainWindow::on_select_done_clicked()
 {
+    QMessageBox::information(this, "Souvenir Shop", "Visiting the Souvenir Shop..."  , QMessageBox::Ok, QMessageBox::NoButton);
     for (int i = 0; i < m_controller->listOfTeams.count();i++)
     {
 
