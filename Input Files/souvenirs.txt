@@ -43,25 +43,25 @@ Autographed baseball
 Baltimore Orioles
 Team jersey
 199.99
-Boston Red Sox 
+Boston Red Sox
 Baseball cap
 18.99
-Boston Red Sox 
+Boston Red Sox
 Baseball bat
 89.39
-Boston Red Sox 
+Boston Red Sox
 Team pennant
 17.99
-Boston Red Sox 
+Boston Red Sox
 Autographed baseball
 29.99
-Boston Red Sox 
+Boston Red Sox
 Team jersey
 199.99
 Chicago Cubs
 Baseball cap
 18.99
-Chicago Cubs 
+Chicago Cubs
 Baseball bat
 89.39
 Chicago Cubs
@@ -202,10 +202,10 @@ Baseball bat
 Los Angeles Dodgers
 Team pennant
 17.99
-Los Angeles Dodgers 
+Los Angeles Dodgers
 Autographed baseball
 29.99
-Los Angeles Dodgers 
+Los Angeles Dodgers
 Team jersey
 199.99
 Miami Marlins
