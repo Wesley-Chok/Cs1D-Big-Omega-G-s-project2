@@ -18,7 +18,7 @@
     <item row="0" column="0">
      <widget class="QStackedWidget" name="stackedWidget">
       <property name="currentIndex">
-       <number>8</number>
+       <number>4</number>
       </property>
       <widget class="QWidget" name="Login">
        <widget class="QGroupBox" name="groupBox">
@@ -383,7 +383,7 @@
          <item>
           <widget class="QPushButton" name="loadstadiumsbtn">
            <property name="text">
-            <string>Load Stadiums</string>
+            <string>Load Stadium Distances</string>
            </property>
           </widget>
          </item>
@@ -1076,6 +1076,9 @@
         </property>
        </widget>
        <widget class="QPlainTextEdit" name="dodgers_text">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
         <property name="geometry">
          <rect>
           <x>240</x>
@@ -1083,6 +1086,9 @@
           <width>201</width>
           <height>91</height>
          </rect>
+        </property>
+        <property name="autoFillBackground">
+         <bool>false</bool>
         </property>
         <property name="plainText">
          <string>Starting at Dodger Stadium, you will be able to select 1 other avaliable stadium to visit.</string>

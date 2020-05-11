@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created by: Qt User Interface Compiler version 5.12.6
+** Created by: Qt User Interface Compiler version 5.14.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -272,7 +272,7 @@ public:
         backtologin->setGeometry(QRect(300, 440, 171, 32));
         tripBox = new QComboBox(Planning);
         tripBox->setObjectName(QString::fromUtf8("tripBox"));
-        tripBox->setGeometry(QRect(580, 60, 121, 32));
+        tripBox->setGeometry(QRect(500, 60, 201, 32));
         stackedWidget->addWidget(Planning);
         Admin = new QWidget();
         Admin->setObjectName(QString::fromUtf8("Admin"));
@@ -451,7 +451,7 @@ public:
         AddSouv->setGeometry(QRect(570, 470, 112, 32));
         layoutWidget7 = new QWidget(souvenirspage);
         layoutWidget7->setObjectName(QString::fromUtf8("layoutWidget7"));
-        layoutWidget7->setGeometry(QRect(70, 470, 339, 33));
+        layoutWidget7->setGeometry(QRect(70, 470, 353, 33));
         horizontalLayout = new QHBoxLayout(layoutWidget7);
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
@@ -693,7 +693,9 @@ public:
         startStadium_button->setGeometry(QRect(20, 160, 201, 91));
         dodgers_text = new QPlainTextEdit(FanOptions);
         dodgers_text->setObjectName(QString::fromUtf8("dodgers_text"));
+        dodgers_text->setEnabled(true);
         dodgers_text->setGeometry(QRect(240, 50, 201, 91));
+        dodgers_text->setAutoFillBackground(false);
         start_text = new QPlainTextEdit(FanOptions);
         start_text->setObjectName(QString::fromUtf8("start_text"));
         start_text->setGeometry(QRect(240, 160, 201, 91));
@@ -734,7 +736,7 @@ public:
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 800, 22));
+        menubar->setGeometry(QRect(0, 0, 800, 26));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
@@ -742,7 +744,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        stackedWidget->setCurrentIndex(6);
+        stackedWidget->setCurrentIndex(4);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -750,81 +752,85 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", nullptr));
-        groupBox->setTitle(QApplication::translate("MainWindow", "Login", nullptr));
-        Loginbtn->setText(QApplication::translate("MainWindow", "Login", nullptr));
-        ClearBtn->setText(QApplication::translate("MainWindow", "Clear", nullptr));
-        usernamelbl->setText(QApplication::translate("MainWindow", "Username", nullptr));
-        passwordlbl->setText(QApplication::translate("MainWindow", "Password", nullptr));
-        MSTbtn->setText(QApplication::translate("MainWindow", "MST", nullptr));
-        DFSbtn->setText(QApplication::translate("MainWindow", "DFS", nullptr));
-        BFSbtn->setText(QApplication::translate("MainWindow", "BFS", nullptr));
-        backtologin->setText(QApplication::translate("MainWindow", "Back", nullptr));
-        loadDatabtn->setText(QApplication::translate("MainWindow", "Load Data", nullptr));
-        gotodisplaybtn->setText(QApplication::translate("MainWindow", "Go to Display", nullptr));
-        Souvenirbtn->setText(QApplication::translate("MainWindow", "Souvenirs", nullptr));
-        EditMlBbtn->setText(QApplication::translate("MainWindow", "Edit MLB info", nullptr));
-        backtopass->setText(QApplication::translate("MainWindow", "Back", nullptr));
-        displaystadiumteambtn->setText(QApplication::translate("MainWindow", "Display Teams Stadium sorted by Team Name", nullptr));
-        disstadiumstadiumbtn->setText(QApplication::translate("MainWindow", "Display Teams Stadium sorted by Stadium Name", nullptr));
-        disAmericanTeam->setText(QApplication::translate("MainWindow", "Display American League", nullptr));
-        disNationalbtn->setText(QApplication::translate("MainWindow", "Display National League", nullptr));
-        disstadiumtypobtn->setText(QApplication::translate("MainWindow", "Display Stadium sorted by Park Typology", nullptr));
-        disteamopenroof->setText(QApplication::translate("MainWindow", "Display Teams with Open Roof", nullptr));
-        disstaddatebtn->setText(QApplication::translate("MainWindow", "Display Stadiums in Chronological order", nullptr));
-        disstadiumseats->setText(QApplication::translate("MainWindow", "Display Stadiums sorted by Seating Capacity", nullptr));
-        disstadiumlarcenter->setText(QApplication::translate("MainWindow", "Display Stadiums sorted by distance to center (Largest)", nullptr));
-        disstadiumsmalcenter->setText(QApplication::translate("MainWindow", "Display Stadiums sorted by distance to center (Smallest)", nullptr));
-        backtoadmin->setText(QApplication::translate("MainWindow", "Back", nullptr));
-        loadSouvenirInfo->setText(QApplication::translate("MainWindow", "Load Souvenir Info", nullptr));
-        loadTeamInfo->setText(QApplication::translate("MainWindow", "Load MLB Info", nullptr));
-        loadstadiumsbtn->setText(QApplication::translate("MainWindow", "Load Stadiums", nullptr));
-        Backtoadmin->setText(QApplication::translate("MainWindow", "Back", nullptr));
-        BacktoAdmin->setText(QApplication::translate("MainWindow", "Back", nullptr));
-        itemssouvlbl->setText(QApplication::translate("MainWindow", "Items to add", nullptr));
-        pricesouvlabel->setText(QApplication::translate("MainWindow", "Price", nullptr));
-        label_3->setText(QApplication::translate("MainWindow", ".", nullptr));
-        Teamnamelbl->setText(QApplication::translate("MainWindow", "Team", nullptr));
-        itemnamelbl->setText(QApplication::translate("MainWindow", "Item Name", nullptr));
-        AddSouv->setText(QApplication::translate("MainWindow", "Add", nullptr));
-        label_9->setText(QApplication::translate("MainWindow", "Price", nullptr));
-        label_8->setText(QApplication::translate("MainWindow", ".", nullptr));
-        Editsouvbtn->setText(QApplication::translate("MainWindow", "Edit", nullptr));
-        deleteSouvbtn->setText(QApplication::translate("MainWindow", "Delete", nullptr));
-        capacitylbl->setText(QApplication::translate("MainWindow", "Capacity ", nullptr));
-        stadiumnamelbl->setText(QApplication::translate("MainWindow", "Stadium Name", nullptr));
-        playingsurfacelbl->setText(QApplication::translate("MainWindow", "Playing Surface", nullptr));
-        rooftypelbl->setText(QApplication::translate("MainWindow", "Roof Type", nullptr));
-        ballparklbl->setText(QApplication::translate("MainWindow", "BallPark Typo", nullptr));
-        dateopenedlbl->setText(QApplication::translate("MainWindow", "Date Opened", nullptr));
-        ditancecenterlbl->setText(QApplication::translate("MainWindow", "Distance to Center", nullptr));
-        locationlbl->setText(QApplication::translate("MainWindow", "Location", nullptr));
+        MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
+        groupBox->setTitle(QCoreApplication::translate("MainWindow", "Login", nullptr));
+        Loginbtn->setText(QCoreApplication::translate("MainWindow", "Login", nullptr));
+        ClearBtn->setText(QCoreApplication::translate("MainWindow", "Clear", nullptr));
+        usernamelbl->setText(QCoreApplication::translate("MainWindow", "Username", nullptr));
+        passwordlbl->setText(QCoreApplication::translate("MainWindow", "Password", nullptr));
+        MSTbtn->setText(QCoreApplication::translate("MainWindow", "MST", nullptr));
+        DFSbtn->setText(QCoreApplication::translate("MainWindow", "DFS", nullptr));
+        BFSbtn->setText(QCoreApplication::translate("MainWindow", "BFS", nullptr));
+        backtologin->setText(QCoreApplication::translate("MainWindow", "Back", nullptr));
+        loadDatabtn->setText(QCoreApplication::translate("MainWindow", "Load Data", nullptr));
+        gotodisplaybtn->setText(QCoreApplication::translate("MainWindow", "Go to Display", nullptr));
+        Souvenirbtn->setText(QCoreApplication::translate("MainWindow", "Souvenirs", nullptr));
+        EditMlBbtn->setText(QCoreApplication::translate("MainWindow", "Edit MLB info", nullptr));
+        backtopass->setText(QCoreApplication::translate("MainWindow", "Back", nullptr));
+        displaystadiumteambtn->setText(QCoreApplication::translate("MainWindow", "Display Teams Stadium sorted by Team Name", nullptr));
+        disstadiumstadiumbtn->setText(QCoreApplication::translate("MainWindow", "Display Teams Stadium sorted by Stadium Name", nullptr));
+        disAmericanTeam->setText(QCoreApplication::translate("MainWindow", "Display American League", nullptr));
+        disNationalbtn->setText(QCoreApplication::translate("MainWindow", "Display National League", nullptr));
+        disstadiumtypobtn->setText(QCoreApplication::translate("MainWindow", "Display Stadium sorted by Park Typology", nullptr));
+        disteamopenroof->setText(QCoreApplication::translate("MainWindow", "Display Teams with Open Roof", nullptr));
+        disstaddatebtn->setText(QCoreApplication::translate("MainWindow", "Display Stadiums in Chronological order", nullptr));
+        disstadiumseats->setText(QCoreApplication::translate("MainWindow", "Display Stadiums sorted by Seating Capacity", nullptr));
+        disstadiumlarcenter->setText(QCoreApplication::translate("MainWindow", "Display Stadiums sorted by distance to center (Largest)", nullptr));
+        disstadiumsmalcenter->setText(QCoreApplication::translate("MainWindow", "Display Stadiums sorted by distance to center (Smallest)", nullptr));
+        backtoadmin->setText(QCoreApplication::translate("MainWindow", "Back", nullptr));
+        loadSouvenirInfo->setText(QCoreApplication::translate("MainWindow", "Load Souvenir Info", nullptr));
+        loadTeamInfo->setText(QCoreApplication::translate("MainWindow", "Load MLB Info", nullptr));
+        loadstadiumsbtn->setText(QCoreApplication::translate("MainWindow", "Load Stadium Distances", nullptr));
+        Backtoadmin->setText(QCoreApplication::translate("MainWindow", "Back", nullptr));
+        BacktoAdmin->setText(QCoreApplication::translate("MainWindow", "Back", nullptr));
+        itemssouvlbl->setText(QCoreApplication::translate("MainWindow", "Items to add", nullptr));
+        pricesouvlabel->setText(QCoreApplication::translate("MainWindow", "Price", nullptr));
+        label_3->setText(QCoreApplication::translate("MainWindow", ".", nullptr));
+        Teamnamelbl->setText(QCoreApplication::translate("MainWindow", "Team", nullptr));
+        itemnamelbl->setText(QCoreApplication::translate("MainWindow", "Item Name", nullptr));
+        AddSouv->setText(QCoreApplication::translate("MainWindow", "Add", nullptr));
+        label_9->setText(QCoreApplication::translate("MainWindow", "Price", nullptr));
+        label_8->setText(QCoreApplication::translate("MainWindow", ".", nullptr));
+        Editsouvbtn->setText(QCoreApplication::translate("MainWindow", "Edit", nullptr));
+        deleteSouvbtn->setText(QCoreApplication::translate("MainWindow", "Delete", nullptr));
+        capacitylbl->setText(QCoreApplication::translate("MainWindow", "Capacity ", nullptr));
+        stadiumnamelbl->setText(QCoreApplication::translate("MainWindow", "Stadium Name", nullptr));
+        playingsurfacelbl->setText(QCoreApplication::translate("MainWindow", "Playing Surface", nullptr));
+        rooftypelbl->setText(QCoreApplication::translate("MainWindow", "Roof Type", nullptr));
+        ballparklbl->setText(QCoreApplication::translate("MainWindow", "BallPark Typo", nullptr));
+        dateopenedlbl->setText(QCoreApplication::translate("MainWindow", "Date Opened", nullptr));
+        ditancecenterlbl->setText(QCoreApplication::translate("MainWindow", "Distance to Center", nullptr));
+        locationlbl->setText(QCoreApplication::translate("MainWindow", "Location", nullptr));
         teamlbl->setText(QString());
         leaguelbl->setText(QString());
-        editstadium->setText(QApplication::translate("MainWindow", "Edit", nullptr));
-        Backtoadmin_2->setText(QApplication::translate("MainWindow", "Back", nullptr));
-        prevstadiumlbl->setText(QApplication::translate("MainWindow", "TextLabel", nullptr));
-        add_button->setText(QApplication::translate("MainWindow", "Add", nullptr));
-        select_done->setText(QApplication::translate("MainWindow", "Done", nullptr));
-        add_label->setText(QApplication::translate("MainWindow", "Avaliable Stadiums", nullptr));
-        selected_label->setText(QApplication::translate("MainWindow", "Selected Stadium", nullptr));
-        sorted_label->setText(QApplication::translate("MainWindow", "Sorted Stadium Trip", nullptr));
-        delete_label->setText(QApplication::translate("MainWindow", "Delete Selected Stadium?", nullptr));
-        delete_button->setText(QApplication::translate("MainWindow", "Delete", nullptr));
-        totDist_label->setText(QApplication::translate("MainWindow", "Total Distance:", nullptr));
-        totDist_slot->setText(QApplication::translate("MainWindow", "0", nullptr));
-        tripSelect_back->setText(QApplication::translate("MainWindow", "Back", nullptr));
-        traversals_button->setText(QApplication::translate("MainWindow", "MST, DFS, BFS", nullptr));
-        custom_button->setText(QApplication::translate("MainWindow", "Custom", nullptr));
-        marlins_button->setText(QApplication::translate("MainWindow", "Marlins", nullptr));
-        dodgers_button->setText(QApplication::translate("MainWindow", "Dodgers", nullptr));
-        fan_label->setText(QApplication::translate("MainWindow", "Welcome, Fan", nullptr));
-        startStadium_button->setText(QApplication::translate("MainWindow", "Start + All Other", nullptr));
-        backtologin_2->setText(QApplication::translate("MainWindow", "Back", nullptr));
-        calculatesouvbtn->setText(QApplication::translate("MainWindow", "Calculate", nullptr));
-        clearsouvbtn->setText(QApplication::translate("MainWindow", "Clear", nullptr));
-        backtotrip->setText(QApplication::translate("MainWindow", "Done", nullptr));
-        label_2->setText(QApplication::translate("MainWindow", "Grand Total:", nullptr));
+        editstadium->setText(QCoreApplication::translate("MainWindow", "Edit", nullptr));
+        Backtoadmin_2->setText(QCoreApplication::translate("MainWindow", "Back", nullptr));
+        prevstadiumlbl->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
+        add_button->setText(QCoreApplication::translate("MainWindow", "Add", nullptr));
+        select_done->setText(QCoreApplication::translate("MainWindow", "Done", nullptr));
+        add_label->setText(QCoreApplication::translate("MainWindow", "Avaliable Stadiums", nullptr));
+        selected_label->setText(QCoreApplication::translate("MainWindow", "Selected Stadium", nullptr));
+        sorted_label->setText(QCoreApplication::translate("MainWindow", "Sorted Stadium Trip", nullptr));
+        delete_label->setText(QCoreApplication::translate("MainWindow", "Delete Selected Stadium?", nullptr));
+        delete_button->setText(QCoreApplication::translate("MainWindow", "Delete", nullptr));
+        totDist_label->setText(QCoreApplication::translate("MainWindow", "Total Distance:", nullptr));
+        totDist_slot->setText(QCoreApplication::translate("MainWindow", "0", nullptr));
+        tripSelect_back->setText(QCoreApplication::translate("MainWindow", "Back", nullptr));
+        traversals_button->setText(QCoreApplication::translate("MainWindow", "MST, DFS, BFS", nullptr));
+        custom_button->setText(QCoreApplication::translate("MainWindow", "Custom", nullptr));
+        marlins_button->setText(QCoreApplication::translate("MainWindow", "Marlins", nullptr));
+        dodgers_button->setText(QCoreApplication::translate("MainWindow", "Dodgers", nullptr));
+        fan_label->setText(QCoreApplication::translate("MainWindow", "Welcome, Fan", nullptr));
+        startStadium_button->setText(QCoreApplication::translate("MainWindow", "Start + All Other", nullptr));
+        dodgers_text->setPlainText(QCoreApplication::translate("MainWindow", "Starting at Dodger Stadium, you will be able to select 1 other avaliable stadium to visit.", nullptr));
+        start_text->setPlainText(QCoreApplication::translate("MainWindow", "After choosing you desired starting stadium, the program will add in all the other avaliable stadiums to visit.", nullptr));
+        marlins_text->setPlainText(QCoreApplication::translate("MainWindow", "Starting at Marlins Park, the program will add in all the other avaliable stadiums to visit.", nullptr));
+        custom_text->setPlainText(QCoreApplication::translate("MainWindow", "You will be able to plan your own dream baseball stadium trip.", nullptr));
+        backtologin_2->setText(QCoreApplication::translate("MainWindow", "Back", nullptr));
+        calculatesouvbtn->setText(QCoreApplication::translate("MainWindow", "Calculate", nullptr));
+        clearsouvbtn->setText(QCoreApplication::translate("MainWindow", "Clear", nullptr));
+        backtotrip->setText(QCoreApplication::translate("MainWindow", "Done", nullptr));
+        label_2->setText(QCoreApplication::translate("MainWindow", "Grand Total:", nullptr));
         grandtotal->setText(QString());
     } // retranslateUi
 
